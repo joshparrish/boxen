@@ -63,7 +63,7 @@ github "python",      "2.0.1"
 github "chrome",      "1.2.0"
 github "iterm2",      "1.2.5"
 github "osx",         "2.8.0"
-github "dropbox",     "2.10.41"
+github "dropbox",     "1.4.1"
 github "spotify",     "1.0.2"
 github "slack",       "1.0.6"
 
