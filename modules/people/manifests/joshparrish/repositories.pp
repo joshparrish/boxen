@@ -77,10 +77,6 @@ class people::joshparrish::repositories (
     require => Repository["${my_sourcedir}/vim-plist"],
   }
 
-  file { '/usr/local/bin':
-    ensure => directory,
-  }
-
   file { '/usr/local/bin/octocatsay':
     ensure  => link,
     target  => "${my_sourcedir}/octocatsay/octocatsay",
