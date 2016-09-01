@@ -49,6 +49,10 @@ class people::joshparrish::repositories (
     require => Repository["/Users/${my_username}/.vim"],
   }
 
+  repository { "${my_sourcedir}/oh-my-zsh":
+    source => 'joshparrish/oh-my-zsh',
+  }
+
   repository { "${my_sourcedir}/octocatsay":
     source => 'cobyism/octocatsay',
   }
@@ -85,7 +89,12 @@ class people::joshparrish::repositories (
     target  => "${my_sourcedir}/dotfiles/tmux.conf",
     require => Repository["${my_sourcedir}/dotfiles"],
   }
-
+  file { "/Users/${my_username}/.zshrc":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zshrc",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
   file { "/Users/${my_username}/.vimrc":
     ensure => link,
     mode   => '0644',
