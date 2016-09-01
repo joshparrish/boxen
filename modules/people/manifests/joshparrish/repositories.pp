@@ -34,6 +34,10 @@ class people::joshparrish::repositories (
   git::config::global { 'alias.dlc':
     value => 'diff --cached HEAD^',
   }
+  
+  repository { "/Users/${my_username}/.vim":
+    source => 'glarizza/vim-puppet'
+  }
 
   repository { "/Users/${my_username}/.vim/bundle/vim-colors-solarized":
     source  => 'altercation/vim-colors-solarized.git',
