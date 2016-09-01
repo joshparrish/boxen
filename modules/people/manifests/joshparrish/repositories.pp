@@ -35,15 +35,6 @@ class people::joshparrish::repositories (
     value => 'diff --cached HEAD^',
   }
 
-  repository { "/Users/${my_username}/.vim":
-    source => 'glarizza/vim-puppet'
-  }
-
-  repository { "/Users/${my_username}/.vim/bundle/vim-surround":
-    source  => 'tpope/vim-surround',
-    require => Repository["/Users/${my_username}/.vim"],
-  }
-
   repository { "/Users/${my_username}/.vim/bundle/vim-colors-solarized":
     source  => 'altercation/vim-colors-solarized.git',
     require => Repository["/Users/${my_username}/.vim"],
@@ -52,10 +43,6 @@ class people::joshparrish::repositories (
   repository { "/Users/${my_username}/.vim/bundle/vim-rust":
     source  => 'wting/rust.vim.git',
     require => Repository["/Users/${my_username}/.vim"],
-  }
-
-  repository { "${my_sourcedir}/oh-my-zsh":
-    source  => 'glarizza/oh-my-zsh',
   }
 
   repository { "${my_sourcedir}/octocatsay":
@@ -95,24 +82,11 @@ class people::joshparrish::repositories (
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
-  file { "/Users/${my_username}/.zshrc":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${my_sourcedir}/dotfiles/zshrc",
-    require => Repository["${my_sourcedir}/dotfiles"],
-  }
-
   file { "/Users/${my_username}/.vimrc":
     ensure => link,
     mode   => '0644',
     target => "${my_sourcedir}/dotfiles/vimrc",
     require => Repository["${my_sourcedir}/dotfiles"],
-  }
-
-  file { "/Users/${my_username}/.oh-my-zsh":
-    ensure  => link,
-    target  => "${my_sourcedir}/oh-my-zsh",
-    require => Repository["${my_sourcedir}/oh-my-zsh"],
   }
 
   repository { "${my_sourcedir}/luggage":
