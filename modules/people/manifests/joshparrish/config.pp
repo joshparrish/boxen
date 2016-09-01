@@ -40,12 +40,6 @@ class people::joshparrish::config (
   # User Config #
   ###############
 
-  # Changes the default shell to the zsh version we get from Homebrew
-  # Uses the osx_chsh type out of boxen/puppet-osx
-  osx_chsh { $my_username:
-    shell   => '/opt/boxen/homebrew/bin/zsh',
-    require => Package['zsh'],
-  }
 
   exec { 'Restart the Dock':
     command     => '/usr/bin/killall -HUP Dock',
