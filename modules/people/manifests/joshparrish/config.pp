@@ -41,7 +41,10 @@ class people::joshparrish::config (
   ###############
   # User Config #
   ###############
-
+  osx_chsh { $my_username:
+    shell   => 'opt/boxen/homebrew/bin/zsh',
+    require => Package['zsh'],
+  }
 
   exec { 'Restart the Dock':
     command     => '/usr/bin/killall -HUP Dock',
