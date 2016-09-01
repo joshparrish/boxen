@@ -70,11 +70,5 @@ class people::joshparrish::config (
     notify     => Exec['Restart the Dock'],
   }
 
-  property_list_key { 'Disable Auto 802.11x':
-      ensure => present,
-      path   => '/Users/joshparrish/Library/Preferences/com.apple.network.eapolcontrol.plist',
-      key    => 'EthernetAutoConnect',
-      value  => 'false',
-    }
 
 }

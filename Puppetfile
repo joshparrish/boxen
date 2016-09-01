@@ -66,5 +66,4 @@ github "osx",         "2.8.0"
 github "dropbox",     "2.10.41"
 github "spotify",     "1.0.2"
 github "slack",       "1.0.6"
-github "property_list_key", '0.2.1',  :repo => "glarizza/puppet-property_list_key"
 
