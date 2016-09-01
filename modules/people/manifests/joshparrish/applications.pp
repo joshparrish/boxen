@@ -19,8 +19,5 @@ class people::joshparrish::applications {
   ## Declare all Homebrew packages at once
   package { $homebrew_packages: }
 
-  package { 'pacifist': provider => 'brewcask' }
-  package { 'onyx': provider => 'brewcask' }
-  package { 'munki': provider => 'brewcask' }
 
 }
