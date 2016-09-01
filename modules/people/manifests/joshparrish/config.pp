@@ -29,9 +29,6 @@ class people::joshparrish::config (
     enable => false
   }
 
-  class { 'osx::dock::position':
-    position => 'left',
-  }
 
   osx::dock::hot_corner { 'Show the desktop':
     position => 'Bottom Right',
