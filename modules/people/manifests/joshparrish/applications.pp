@@ -1,4 +1,4 @@
-class people::jparrish::applications {
+class people::joshparrish::applications {
   include chrome
   include spotify
   include iterm2:stable
