@@ -44,11 +44,6 @@ class people::joshparrish::config (
   ###############
   # User Config #
   ###############
-  ## Because we need INTEGER values for that hash, we have to do this
-  ## ugliness.  Yes, it IS ugly.  Sorry :(
-  $two  = integer('2')
-  $zero = integer('0')
-
 
   # Changes the default shell to the zsh version we get from Homebrew
   # Uses the osx_chsh type out of boxen/puppet-osx
