@@ -38,8 +38,6 @@ class people::joshparrish::config (
     action => 'Put Display to Sleep'
   }
 
-  $recovery_message = "Gary Larizzas Macbook Pro. If found, please email joshparrish@astate.edu or call 870-340-5299."
-  osx::recovery_message { $recovery_message: }
 
   ###############
   # User Config #
