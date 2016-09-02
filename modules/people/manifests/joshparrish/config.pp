@@ -14,7 +14,6 @@ class people::joshparrish::config (
   include osx::global::expand_save_dialog
   include osx::global::tap_to_click
   include osx::finder::unhide_library
-  include osx::finder::show_all_on_desktop
   include osx::finder::enable_quicklook_text_selection
   include osx::dock::clear_dock
   include iterm2::colors::solarized_dark  
