@@ -16,7 +16,7 @@ class people::joshparrish::config (
   include osx::finder::unhide_library
   include osx::finder::show_all_on_desktop
   include osx::finder::enable_quicklook_text_selection
-
+  include osx::dock::clear_dock
   include iterm2::colors::solarized_dark  
   
   class { 'osx::mouse::swipe_between_pages':
@@ -30,7 +30,6 @@ class people::joshparrish::config (
   class { 'osx::sound::interface_sound_effects':
     enable => false
   }
-
 
   osx::dock::hot_corner { 'Show the desktop':
     position => 'Bottom Right',

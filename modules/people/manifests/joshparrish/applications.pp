@@ -2,6 +2,7 @@ class people::joshparrish::applications {
   include chrome
   include spotify
   include iterm2::stable
+  include dropbox
 
   $homebrew_packages = [
     'tree',
