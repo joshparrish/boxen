@@ -57,6 +57,11 @@ class people::joshparrish::repositories (
     require => Repository["/Users/${my_username}/.vim"],
   }
 
+  repository { "/Users/${my_username}/.vim/bundle/vim-rust":
+    source  => 'wting/rust.vim.git',
+    require => Repository["/Users/${my_username}/.vim"],
+  }
+
   file { "/Users/${my_username}/.vim/plugin/plist.vim":
     ensure  => file,
     source  => "${my_sourcedir}/vim-plist/plugin/plist.vim",
@@ -72,6 +77,13 @@ class people::joshparrish::repositories (
 
   repository { "${my_sourcedir}/dotfiles":
     source => 'joshparrish/dotfiles',
+  }
+
+  file { "/Users/${my_username}/.zshrc":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zshrc",
+    require => Repository["${my_sourcedir}/dotfiles"],
   }
 
   file { "${my_homedir}/.tmux.conf":
