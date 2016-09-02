@@ -49,10 +49,6 @@ class people::joshparrish::repositories (
     require => Repository["/Users/${my_username}/.vim"],
   }
 
-  repository { "${my_sourcedir}/oh-my-zsh":
-    source => 'joshparrish/oh-my-zsh',
-  }
-
   repository { "${my_sourcedir}/octocatsay":
     source => 'cobyism/octocatsay',
   }
