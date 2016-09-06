@@ -66,6 +66,11 @@ class people::joshparrish::repositories (
     require => Repository["/Users/${my_username}/.vim"],
   }
 
+  repository { "/Users/${my_username}/.vim/bundle/vim-autoformat":
+    source  => 'Chiel92/vim-autoformat.git',
+    require => Repository["/Users/${my_username}/.vim"],
+  }
+
   file { "/Users/${my_username}/.vim/plugin/plist.vim":
     ensure  => file,
     source  => "${my_sourcedir}/vim-plist/plugin/plist.vim",
