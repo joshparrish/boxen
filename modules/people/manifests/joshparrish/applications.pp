@@ -13,7 +13,7 @@ class people::joshparrish::applications {
     'tmux',
     'rust',
     'libxml2',
-    'imagemagick'
+    'imagemagick',
     'tidyp',
     'astyle',
 
