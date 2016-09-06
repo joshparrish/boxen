@@ -14,6 +14,8 @@ class people::joshparrish::applications {
     'rust',
     'libxml2',
     'imagemagick'
+    'tidyp'
+    'astyle'
    ]
 
   ## Declare all Homebrew packages at once
