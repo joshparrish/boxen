@@ -107,13 +107,6 @@ class people::joshparrish::repositories (
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
-  file { "/Users/${my_username}/.zshrc":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${my_sourcedir}/dotfiles/zshrc",
-    require => Repository["${my_sourcedir}/dotfiles"],
-  }
-
   file { "/Users/${my_username}/.zlogout":
     ensure  => link,
     mode    => '0644',
