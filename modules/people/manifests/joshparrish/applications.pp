@@ -2,7 +2,6 @@ class people::joshparrish::applications {
   include chrome
   include spotify
   include iterm2::stable
-  include prezto
 
   $homebrew_packages = [
     'tree',
