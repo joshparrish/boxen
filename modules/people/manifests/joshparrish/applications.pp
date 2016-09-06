@@ -2,7 +2,6 @@ class people::joshparrish::applications {
   include chrome
   include spotify
   include iterm2::stable
-  include prezto
 
   $homebrew_packages = [
     'tree',
@@ -21,5 +20,12 @@ class people::joshparrish::applications {
   package { $homebrew_packages: }
   
   package { 'dropbox': provider => 'brewcask' }
+  package { 'mactracker': provider => 'brewcask' }
+  package { 'chrome': provider => 'brewcask' }
+  package { 'packages': provider => 'brewcask' }
+  package { 'pacifist': provider => 'brewcask' }
+  package { 'onyx': provider => 'brewcask' }
+  package { 'disk-drill': provider => 'brewcask' }
+ 
 
 }
