@@ -16,7 +16,8 @@ class people::joshparrish::applications {
     'imagemagick'
     'tidyp',
     'astyle',
-   ]
+
+  ]
 
   ## Declare all Homebrew packages at once
   package { $homebrew_packages: }
