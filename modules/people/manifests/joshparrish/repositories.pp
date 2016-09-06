@@ -20,7 +20,7 @@ class people::joshparrish::repositories (
   }
 
   git::config::global{ 'user.email':
-    value => 'jparrish@astate.edu',
+    value => 'joshparrish@astate.edu',
   }
 
   git::config::global{ 'color.ui':
