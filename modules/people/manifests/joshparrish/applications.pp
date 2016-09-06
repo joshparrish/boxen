@@ -26,7 +26,6 @@ class people::joshparrish::applications {
   package { 'mactracker': provider => 'brewcask' }
   package { 'packages': provider => 'brewcask' }
   package { 'pacifist': provider => 'brewcask' }
-  package { 'onyx': provider => 'brewcask' }
   package { 'disk-drill': provider => 'brewcask' }
  
 
