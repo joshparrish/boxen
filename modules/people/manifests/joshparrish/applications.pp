@@ -24,7 +24,6 @@ class people::joshparrish::applications {
   
   package { 'dropbox': provider => 'brewcask' }
   package { 'mactracker': provider => 'brewcask' }
-  package { 'chrome': provider => 'brewcask' }
   package { 'packages': provider => 'brewcask' }
   package { 'pacifist': provider => 'brewcask' }
   package { 'onyx': provider => 'brewcask' }
