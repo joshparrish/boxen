@@ -20,7 +20,7 @@ class people::joshparrish::repositories (
   }
 
   git::config::global{ 'user.email':
-    value => 'joshparrish@astate.edu',
+    value => 'jparrish@astate.edu',
   }
 
   git::config::global{ 'color.ui':
@@ -83,6 +83,48 @@ class people::joshparrish::repositories (
     ensure  => link,
     mode    => '0644',
     target  => "${my_sourcedir}/dotfiles/zshrc",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+  
+  file { "/Users/${my_username}/.zlogin":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zlogin",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "/Users/${my_username}/.zprofile":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zprofile",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "/Users/${my_username}/.zshenv":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zshenv",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "/Users/${my_username}/.zshrc":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zshrc",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "/Users/${my_username}/.zlogout":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zlogout",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "/Users/${my_username}/.zpreztorc":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${my_sourcedir}/dotfiles/zpreztorc",
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
