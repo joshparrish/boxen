@@ -48,6 +48,10 @@ class people::joshparrish::repositories (
     source => 'cobyism/octocatsay',
   }
 
+  repository { "${my_sourcedir}/prezto":
+    source => 'joshparrish/prezto',
+  }
+
   repository { "${my_sourcedir}/solarized":
     source => 'altercation/solarized',
   }
