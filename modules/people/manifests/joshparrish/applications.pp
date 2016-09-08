@@ -22,11 +22,11 @@ class people::joshparrish::applications {
   ## Declare all Homebrew packages at once
   package { $homebrew_packages: }
   
-  package { 'dropbox': provider => 'brewcask' }
+  package { 'dropbox': provider    => 'brewcask' }
   package { 'mactracker': provider => 'brewcask' }
-  package { 'packages': provider => 'brewcask' }
-  package { 'pacifist': provider => 'brewcask' }
+  package { 'packages': provider   => 'brewcask' }
+  package { 'pacifist': provider   => 'brewcask' }
   package { 'disk-drill': provider => 'brewcask' }
- 
+  package { 'appcleaner': provider => 'brewcask' }
 
 }
